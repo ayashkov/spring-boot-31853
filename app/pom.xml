@@ -31,7 +31,7 @@
                             <goal>repackage</goal>
                         </goals>
                         <configuration>
-                            <mainClass>org.yashkov.sbe.WebApp</mainClass>
+                            <mainClass>org.yashkov.sbe.web.WebApp</mainClass>
                             <classifier>exec</classifier>
                         </configuration>
                     </execution>
