@@ -1,4 +1,4 @@
-package org.yashkov.sbe;
+package org.yashkov.sbe.web;
 
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
     produces = MediaType.APPLICATION_JSON_VALUE)
 public class StatusController {
     @GetMapping
-    public Status get()
+    public StatusModel get()
     {
-        return new Status();
+        return new StatusModel();
     }
 }

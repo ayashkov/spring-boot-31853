@@ -6,15 +6,22 @@
     <groupId>org.yashkov.sbe</groupId>
     <artifactId>sbe</artifactId>
     <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
     <name>Spring Boot issue 31853</name>
     <description>An attempt to reproduce Spring Boot issue 31853.</description>
 
     <properties>
+        <spring-boot.version>2.7.2</spring-boot.version>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <spring-boot.version>2.7.2</spring-boot.version>
     </properties>
+
+    <modules>
+        <module>app</module>
+        <module>core</module>
+        <module>web</module>
+    </modules>
 
     <dependencyManagement>
         <dependencies>
@@ -27,32 +34,4 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-webflux</artifactId>
-        </dependency>
-    </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${spring-boot.version}</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                        <configuration>
-                            <mainClass>org.yashkov.sbe.WebApp</mainClass>
-                            <classifier>exec</classifier>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
 </project>
