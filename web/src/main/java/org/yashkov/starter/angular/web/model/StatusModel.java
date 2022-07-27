@@ -1,4 +1,4 @@
-package org.yashkov.sbe.web;
+package org.yashkov.starter.angular.web.model;
 
 import org.springframework.hateoas.RepresentationModel;
 

@@ -1,11 +1,11 @@
-package org.yashkov.sbe.web;
+package org.yashkov.starter.angular.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;
 import org.springframework.hateoas.config.EnableHypermediaSupport;
 import org.springframework.hateoas.config.EnableHypermediaSupport.HypermediaType;
-import org.yashkov.sbe.core.CoreConfig;
+import org.yashkov.starter.angular.core.CoreConfig;
 
 @SpringBootApplication
 @EnableHypermediaSupport(type = HypermediaType.HAL)

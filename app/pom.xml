@@ -36,7 +36,7 @@
                             <goal>repackage</goal>
                         </goals>
                         <configuration>
-                            <mainClass>org.yashkov.sbe.web.WebApp</mainClass>
+                            <mainClass>org.yashkov.starter.angular.web.WebApp</mainClass>
                             <layout>ZIP</layout>
                             <classifier>exec</classifier>
                         </configuration>

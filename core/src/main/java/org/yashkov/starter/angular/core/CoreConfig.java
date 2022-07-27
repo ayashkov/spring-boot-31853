@@ -1,4 +1,4 @@
-package org.yashkov.sbe.core;
+package org.yashkov.starter.angular.core;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
