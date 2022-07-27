@@ -6,7 +6,7 @@ import org.springframework.hateoas.MediaTypes;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.yashkov.starter.angular.core.usecase.impl.GetStatusImpl;
+import org.yashkov.starter.angular.core.usecase.GetStatus;
 import org.yashkov.starter.angular.web.model.StatusModel;
 
 @RestController
@@ -16,12 +16,14 @@ public class StatusController {
     public static final String SELF = "/api/status";
 
     @Autowired
-    private GetStatusImpl getStatus;
+    private GetStatus getStatus;
 
     @GetMapping
     public StatusModel get()
     {
-        var model = new StatusModel(getStatus.getStatus());
+        var status = getStatus.getStatus();
+        var model = new StatusModel(status.isDrain() ? "DRAIN" : "UP",
+            status.getAppVersion());
 
         model.add(Link.of(SELF));
 
